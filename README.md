@@ -1,24 +1,37 @@
-# linux-health-monitor
+# Linux System Health Monitor
 
-A bash scripting project that monitors:
--CPU usage
--Memory usage
--Disk usage
--System uptime
+A lightweight Bash script designed to monitor system health metrics, output a formatted report, save it to a log file, and warn you if resource thresholds are exceeded.
 
 ## Features
--Generates health reports
--Stores reports in log file
--Disk usage threshold alerts
--Memory usage threshold alerts
--Cpu usage threshold alerts
 
-##Sample output
-====================
-SYSTEM HEALTH REPORT
-====================
-Generated At : Sun Jun  7 12:28:08 AM UTC 2026
-CPU Usage : 36.6 %
-Memory Usage :47.76 %
-Disk Usage :54%
-Uptime :up 3 days, 8 hours, 23 minutes
+- **CPU Usage Monitoring**: Calculates the current CPU usage percentage.
+- **Memory Usage Monitoring**: Checks the memory usage percentage and warns if it exceeds 75%.
+- **Disk Usage Monitoring**: Tracks the root disk partition (`/`) usage and warns if it exceeds 80%.
+- **Uptime Tracking**: Reports the current system uptime.
+- **Automated Logging**: Saves each report to a unique timestamped file under the `logs/` directory.
+
+## Sample Report Output
+
+Here is an example of what the generated report looks like:
+
+![System Health Monitor Sample Report](image.png)
+
+## Installation & Setup
+
+1. **Clone or copy the script**:
+   Save `health_monitor.sh` to your system.
+
+2. **Make the script executable**:
+   ```bash
+   chmod +x health_monitor.sh
+   ```
+
+3. **Run the script**:
+   ```bash
+   ./health_monitor.sh
+   ```
+
+## Logs Directory
+
+The script automatically creates a `logs/` directory and saves the report as:
+`logs/health_YYYYMMDD_HHMMSS.log`
