@@ -17,7 +17,7 @@ echo "Generated At : $(date)"
 echo "CPU Usage : ${CPU_USAGE} %"
 echo "Memory Usage :${MEMORY_USAGE} %"
 echo "Disk Usage :${DISK_USAGE}"
-echo "Uptime :${UPTIME}"`
+echo "Uptime :${UPTIME}"
 } > "$LOGFILE"
 
 echo "Report saved to $LOGFILE"
